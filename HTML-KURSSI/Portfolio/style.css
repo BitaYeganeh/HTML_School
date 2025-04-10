@@ -8,8 +8,8 @@ body {
   }
   
   header {
-    background-color:hwb(115 7% 24% / 0.545)
-    color:rgb(52, 35, 35);
+    background-color:hwb(115 7% 24% / 0.545);
+    color: #fff;
     padding: 20px;
     text-align: center;
   }
