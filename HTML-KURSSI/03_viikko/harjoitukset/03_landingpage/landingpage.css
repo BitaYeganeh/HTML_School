@@ -6,11 +6,7 @@ body {
   }
   li:first-child {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-  
-
 }
-
 
 nav {
 
@@ -19,10 +15,6 @@ nav {
 }
 nav > div:first-child {
     background-color:#69013b
-
-} 
-.hero {
-    
 }
 /* Hover effect */
 .cta-button:hover {

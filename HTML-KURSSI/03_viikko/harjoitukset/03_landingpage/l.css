@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  nav {
+    background-color: #69013b;
+    padding: 10px 20px;
+  }
+
+  .hero {
+    font-size: large;
+    background-color:bisque;
+    color: brown;
+    text-align: center;
+    height: 20vh;
+    padding: 20px;
+
+  }
+  
+  .hero-content {
+    max-width: 2000px;
+    text-align: center;
+    padding: 20px;
+  }
+  .cta-button{
+    font-size:medium;
+    font-style: bold;
+    background-color: #ff5722;
+    color: white;
+    padding: 1rem 2rem;
+  }
+  .course {
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+    text-align: left;
+  }
