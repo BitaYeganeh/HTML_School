@@ -1,0 +1,31 @@
+/* Basic styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-size:cover;
+  }
+  li:first-child {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+  
+
+}
+
+
+nav {
+
+    /*padding: 25px;*/
+    color: white;
+}
+nav > div:first-child {
+    background-color:#69013b
+
+} 
+.hero {
+    
+}
+/* Hover effect */
+.cta-button:hover {
+    background-color: #19e642; /* Darker shade of orange */
+
+  }
