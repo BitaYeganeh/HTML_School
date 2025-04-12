@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  nav {
+    background-color: #69013b;
+    background-size: cover;
+    background-position: left;
+    padding: 10px;
+  }
+
+  .hero {
+    font-size: medium;
+    background: linear-gradient(to right, #a0e00b2c, #ad63ac);
+    text-align: center;
+    height:fit-content;
+    padding: 20px;
+
+  }
+  
+  .hero-content {
+    max-width: 500px;
+    text-align: center;
+    padding: 5px;
+   
+  }
+  .cta-button{
+    font-size:medium;
+    font-style: bold;
+    background-color:orchid;
+    padding: 1rem 2rem;
+  }
+  
+  /* Hover effect */
+.cta-button:hover {
+  background-color:aqua; /* Darker shade of orange */
+
+}
+
+.course {
+  padding: 10px;
+  background-color: #f4f4f4;
+  text-align: left;}
+
+  p::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color: red;
+}
+p::selection {
+  background: yellow;
+  color:green;
+}
+h1::before {
+  content: "🔥 "; /* Lisää emojin ennen jokaista h1-elementtiä */
+}
+
+p::after {
+  content: " 🎉"; /* Lisää emojin jokaisen h1-elementin jälkeen */
+}
