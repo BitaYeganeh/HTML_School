@@ -6,13 +6,13 @@ body {
     
     
   }
-  
   header {
     background-color:hwb(115 7% 24% / 0.545);
     color: #fff;
     padding: 20px;
     text-align: center;
   }
+ 
   
   section {
     padding: 20px;
@@ -42,3 +42,4 @@ body {
     background-color:antiquewhite;
     color: #fff;
   }
+  main-h2 {background:red;}

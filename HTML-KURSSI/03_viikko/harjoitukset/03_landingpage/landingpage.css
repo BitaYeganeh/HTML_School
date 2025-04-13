@@ -19,5 +19,29 @@ nav > div:first-child {
 /* Hover effect */
 .cta-button:hover {
     background-color: #19e642; /* Darker shade of orange */
+}
+.course {
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-align: left;}
+  
 
+  p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
   }
+  p::selection {
+    background: yellow;
+    color:green;
+  }
+  h1::before {
+    content: "🔥 "; /* Lisää emojin ennen jokaista h1-elementtiä */
+  }
+  
+  p::after {
+    content: " 🎉"; /* Lisää emojin jokaisen h1-elementin jälkeen */
+  }
+  
+
+  
