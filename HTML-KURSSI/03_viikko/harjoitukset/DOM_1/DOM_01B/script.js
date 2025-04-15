@@ -7,7 +7,5 @@ Lisää napille getElementById:n avulla tapahtumakäsittelijä, joka kuuntelee
 */
   // Valitaan nappi ja lisätään kuuntelija
   document.getElementById("press").addEventListener("click", function () {
-    const numberElement = document.getElementById("number");
-    let currentNumber = parseInt(numberElement.textContent);
-    numberElement.textContent = currentNumber + 1;
+    document.getElementById("number").textContent++;
   });
