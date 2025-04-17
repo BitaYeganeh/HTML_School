@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM 6</title>
+    <style>
+        .error{
+            color:red
+        }
+    </style>
 </head>
 <body>
     <h1>Personal info-form:</h1>
 <form>
     <label for="inputName">Name:</label>
-    <input id="inputName" type="text" placeholder="Write your name here">
+    <input id="inputName" type="text" placeholder="Write your name here" required>
     <br><br>
     <label for="inputEmail">Email:</label>
-    <input id="inputEmail" type="text" size="50" placeholder="Write your Email here">
+    <input id="inputEmail" type="email" size="50" placeholder="Write your Email here">
     <br><br>
     <label for="phone">Phone number:</label>
     <input type="tel" id="phone" name="phone"
@@ -26,6 +31,7 @@
     <br>
     
     <button id="submit">send</button>
+    <p class="error" id="errorMessage"></p>
 </form>
     
 

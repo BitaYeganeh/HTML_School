@@ -8,7 +8,7 @@ document.getElementById("submit").addEventListener("click", function () {
     const name = document.getElementById("inputName").value;
     const email = document.getElementById("inputEmail").value;
 
-    if (name === "" || email ===) {
+    if (name === "" || email === "") {
         alert("Please fill in both name and email.");
     } else {
         alert("The form is submitted successfully!");
