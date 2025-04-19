@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pankkiautomaatti</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Simple Bank</title>
 </head>
 <body>
-    <form>
-    <h1>Your Balance is:<span id = "Balance" > 0</span> €</h1>
-    <h2>Deposit Money</h2>
-    <input type="number" id="depositAmount" placeholder="Enter your amount">
-    <button click="deposit Amount">Deposit Amount</button><br></br>
 
-    <input type="number" id="Withdraw Money" placeholder="Enter your amount">
-    <button click="Withdraw Money">Withdraw Money</button>
-    <p id="Alert Message">Not enough Balance</p>
-</form>
+  <h1>Welcome to the Bank</h1>
+
+  <!-- PIN Section -->
+  <div id="login">
+    <input type="number" id="pinInput" placeholder="Enter PIN" />
+    <button id="pinButton">Login</button>
+    <p id="pinError"></p>
+  </div>
+
+  <!-- Banking Section -->
+  <div id="banking">
+    <h2>Balance: <span id="balance">2000</span> €</h2>
+
+    <h3>Deposit</h3>
+    <input type="number" id="depositInput" placeholder="Amount to deposit" />
+    <button id="depositButton">Deposit</button>
+
+    <h3>Withdraw</h3>
+    <input type="number" id="withdrawInput" placeholder="Amount to withdraw" />
+    <button id="withdrawButton">Withdraw</button>
+
+    <p id="alert">Not enough balance!</p>
+  </div>
+
+  <script src="bank.js"></script>
 
 </body>
-<script src="pankki.js"></script>
 </html>
-
-
-
