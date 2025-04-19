@@ -40,9 +40,10 @@
         setTimeout(function () {
         totalPriceBanner.classList.remove('animate-price');
         }, 300);
-
         
         }
+
+        
         typeChoosing.addEventListener('change', calculateTotal);
         toppingChoosing.forEach(function(checkbox){
             checkbox.addEventListener('change', calculateTotal);
