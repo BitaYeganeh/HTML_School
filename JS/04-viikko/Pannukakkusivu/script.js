@@ -14,15 +14,18 @@
         let toppingsTotal = 0;
         toppingChoosing.forEach(function(checkbox) {
             if (checkbox.checked){
-                toppingsTotal += 1;
+                toppingsTotal = toppingsTotal + 1;
             }
         });
 
-        total += toppingsTotal;
+        total = total + toppingsTotal;
 
         extraChoosing.forEach(function(checkbox) {
             if (checkbox.checked) {
-                total += parseFloat(checkbox.value);
+
+        total = total + parseFloat(checkbox.value);
+
+
             }
 
 
@@ -30,8 +33,15 @@
 
         totalPriceDisplay.textContent = `${total}€`;
         totalPriceBanner.textContent = `${total}€`;
-    
 
+
+        totalPriceBanner.classList.add('animate-price');
+
+        setTimeout(function () {
+        totalPriceBanner.classList.remove('animate-price');
+        }, 300);
+
+        
         }
         typeChoosing.addEventListener('change', calculateTotal);
         toppingChoosing.forEach(function(checkbox){
