@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <title>Simple Bank</title>
+  <link rel="stylesheet" href="pankki.css" />
+  <link href= "https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <title>ATM Simulator</title>
 </head>
 <body>
 
@@ -12,27 +13,33 @@
 
   <!-- PIN Section -->
   <div id="login">
-    <input type="number" id="pinInput" placeholder="Enter PIN" />
+    <input type="number" id="pinInput" placeholder="Enter your PIN" />
     <button id="pinButton">Login</button>
     <p id="pinError"></p>
   </div>
 
   <!-- Banking Section -->
+
+   <!--display balance-->
   <div id="banking">
-    <h2>Balance: <span id="balance">2000</span> €</h2>
+    <h2>( Your Current Balance: <span id="balance">2000</span> € )</h2>
 
-    <h3>Deposit</h3>
-    <input type="number" id="depositInput" placeholder="Amount to deposit" />
-    <button id="depositButton">Deposit</button>
-
-    <h3>Withdraw</h3>
+    <!-- input field and a button to withdarw money-->
+    <h3>- Withdraw Money:</h3>
     <input type="number" id="withdrawInput" placeholder="Amount to withdraw" />
-    <button id="withdrawButton">Withdraw</button>
+    <button id="withdrawButton">Click here</button>
 
-    <p id="alert">Not enough balance!</p>
+    <!--input field and a button to deposit money-->
+    <h3>- Deposit Money:</h3>
+    <input type="number" id="depositInput" placeholder="Amount to deposit" />
+    <button id="depositButton">Click here</button>
+
+    <!-- Error message -->
+    <p id="alert"></p>
+
   </div>
 
-  <script src="bank.js"></script>
+  <script src="pankki.js"></script>
 
 </body>
 </html>

@@ -1,23 +1,45 @@
-* body{
-    margin: 0;
-    padding:0;
 
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+  padding: 30px;
+  color: #333;
 }
-.banking {
-    display: none;
-    margin-top: 20px;
-  }
+h2{
+  text-align: right;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+h1{
+text-align: center;
+color: #0074D9;
+padding-bottom: 30px;
+}
   
-  .alert {
-    color: red;
-    display: none;
-  }
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 5px;
   
- 
-  
-  input, button {
-    display: block;
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-  }
+}
+
+#alert, #pinError {
+  color: red;
+  margin-top: 20px;
+}
+
+
