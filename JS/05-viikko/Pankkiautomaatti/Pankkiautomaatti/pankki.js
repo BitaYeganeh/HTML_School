@@ -1,5 +1,5 @@
 // initial balance
-let balance = 2000;
+let balance = 0;
 const correctPIN = "1234";
 
 // DOM elements

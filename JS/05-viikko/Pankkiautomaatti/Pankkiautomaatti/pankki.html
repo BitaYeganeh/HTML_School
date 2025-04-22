@@ -9,13 +9,20 @@
 </head>
 <body>
 
-  <h1>Hei! Welcome to the Bank</h1>
+  <h1 style="font-size: 30px;">Hei! Welcome to the Bank</h1>
 
 
   <!-- PIN Section -->
   <div id="login">
-    <input type="number" id="pinInput" placeholder="Enter your PIN" />
-    <button id="pinButton">Login</button>
+    <input 
+    type="number" 
+    id="pinInput" 
+    placeholder="Enter your PIN" 
+    />
+
+    <button 
+    id="pinButton" 
+    style="width: 90px;">Login</button>
     <p id="pinError"></p>
   </div>
 
@@ -23,16 +30,24 @@
 
    <!--display balance-->
   <div id="banking">
-    <h2>( Your Current Balance: <span id="balance">2000</span> € )</h2>
+    <h2 style="font-size: 24px; text-decoration: underline;">Your Current Balance: <span id="balance"> 0</span> € </h2>
 
     <!-- input field and a button to withdarw money-->
     <h3>- Withdraw Money:</h3>
-    <input type="number" id="withdrawInput" placeholder="Amount to withdraw" />
+    <input 
+    type="number" 
+    id="withdrawInput" 
+    placeholder="Amount to withdraw" 
+    />
     <button id="withdrawButton">Click here</button>
 
     <!--input field and a button to deposit money-->
     <h3>- Deposit Money:</h3>
-    <input type="number" id="depositInput" placeholder="Amount to deposit" />
+    <input 
+    type="number" 
+    id="depositInput" 
+    placeholder="Amount to deposit" 
+    />
     <button id="depositButton">Click here</button>
 
     <!-- Error message -->

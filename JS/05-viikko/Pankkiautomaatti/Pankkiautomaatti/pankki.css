@@ -6,8 +6,11 @@ body {
   padding: 30px;
   color: #333;
 }
+
+
+
 h2{
-  text-align: right;
+  text-align: center;
   padding-top: 20px;
   padding-bottom: 30px;
   font-family:Georgia, 'Times New Roman', Times, serif
@@ -28,8 +31,8 @@ input {
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #0074D9;
+  padding: 10px 15px;
+  background-color:dodgerblue;
   color: white;
   border: none;
   border-radius: 5px;
@@ -41,5 +44,6 @@ button {
   color: red;
   margin-top: 20px;
 }
+
 
 
