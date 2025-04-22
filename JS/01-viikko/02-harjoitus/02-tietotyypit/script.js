@@ -8,11 +8,11 @@
 
 //Käytä typeof-operatoria tarkistaaksesi jokaisen muuttujan tietotyypin ja tulosta tulos console.log()-metodilla.
 
-let age = 18;
-let name = "Emil";
+let age = 40;
+let name = "Bita Yeganeh";
 let isStudent = true;
-let hobbies = ["lukeminen", "piirtäminen", "uiminen"];
-let info = {schoolName: "Business College Helsinki", grade: 2};
+let hobbies = ("lukeminen, piirtäminen, uiminen");
+let info = ("school Name: Business College Helsinki, grade: 2");
 
 console.log("age:", age);
 console.log("name:", name);

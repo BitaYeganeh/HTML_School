@@ -1,45 +1,145 @@
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color:darksalmon
-    
-    
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* Centers the content vertically */
+}
+
+.container {
+  width: 80%;        /* Adjust width to control how wide your content is */
+  max-width: 1000px; /* You can set a max width for larger screens */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to give it a box effect */
+  border-radius: 8px;  /* Optional: Rounded corners */
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* About Section */
+#about {
+  background-color: #e9f7fd;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+
+/* Experience Section */
+#experience {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.experience-item p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Education Section */
+#education {
+  background-color: #e9f7fd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.education-item h3 {
+  font-size: 1.4rem;
+}
+
+.education-item p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
-  header {
-    background-color:hwb(115 7% 24% / 0.545);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+
+  header p {
+    font-size: 1rem;
   }
- 
-  
+
   section {
-    padding: 20px;
-    margin: 10px auto;
-    max-width: 800px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
   }
-  
-  h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
+
+  .experience-item h4,
+  .education-item h3 {
+    font-size: 1.2rem;
   }
-  
-  a {
-    color:blue;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  footer {
-    text-align: right;
-    padding: 10px;
-    background-color:antiquewhite;
-    color: #fff;
-  }
-  main-h2 {background:red;}
+}
