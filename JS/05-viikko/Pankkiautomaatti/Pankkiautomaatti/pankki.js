@@ -47,6 +47,13 @@ depositButton.addEventListener("click", function () {
   }
 });
 
+
+function naytaviestin (teksti, onVirhe = true){
+  const viesti =document.getElementById("viesti");
+  viesti.textContent = teksti;
+  viesti.style.coclor = onVirhe ? "red" : "green";
+}
+
 // Withdraw
 withdrawButton.addEventListener("click", function () {
   const amount = parseFloat(withdrawInput.value);
