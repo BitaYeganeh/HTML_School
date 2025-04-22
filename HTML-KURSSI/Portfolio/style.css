@@ -18,9 +18,29 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to give it a box effect */
   border-radius: 8px;  /* Optional: Rounded corners */
 }
+#hero {
+  background-image: url("/p.stuff/cv\ image.jpeg");
+  background-size:center;
+  background-repeat: no-repeat;   /* stops repeating/mirroring */
+  background-position: center;
+  height:115vh;
+  position: relative;
+}
+.hero-content {
+  position: absolute;
+  top:30px;
+  left: 30px;
+  color: white;
+  background-color: rgb(28, 100, 136);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+  
+
+
 
 header {
-  background-color: #007bff;
+  background-color:  rgb(28, 100, 136);
   color: white;
   text-align: center;
   padding: 40px 0;
@@ -29,6 +49,9 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+}
+h2{
+  color: rgb(28, 100, 136);
 }
 
 header p {
@@ -116,7 +139,7 @@ a:hover {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #007bff;
+  background-color: rgb(28, 100, 136);
   color: white;
 }
 
