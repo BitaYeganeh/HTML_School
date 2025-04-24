@@ -4,3 +4,7 @@ Käännä safariAnimals-taulukon järjestys päinvastaiseksi.
 Odotettu tulos: ['Zeebra', 'Leopardi', 'Gazelli', 'Elefantti']
 */
 // Kirjoita koodisi tähän
+
+let safariAnimals = ["Zeebra", "Leopardi", "Elefantti", "Gazelli"];
+safariAnimals.sort().reverse();
+console.log(safariAnimals);
