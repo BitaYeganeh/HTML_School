@@ -10,3 +10,18 @@ Odotettu tulos:
 
 let elainvarasto1 = ["Kettu", "Peura", "Pöllö", "Karhu"];
 let elainvarasto2 = ["Karhu", "Susi", "Kotka", "Kettu"];
+
+   for (let i = 0; i < elainvarasto1.length; i++ ) {
+
+    let current=elainvarasto1[i];
+    if (elainvarasto2.includes(current)){
+        console.log("Yhteinen laji:" + current);
+
+    }
+    
+    }
+        
+    
+
+
+
