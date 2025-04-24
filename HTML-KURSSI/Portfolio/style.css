@@ -1,20 +1,38 @@
 /* Global styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
   background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;  /* Centers the content vertically */
+  color: #333;
+  line-height: 1.6;
+  padding: 2rem
 }
+p {
+  max-width: 700px;
+  color:black;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: 1.2rem 1.5rem;
+  border-left: 4px solid rgb(28, 100, 136);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  
+}
+
+
 
 .container {
   width: 80%;        /* Adjust width to control how wide your content is */
   max-width: 1000px; /* You can set a max width for larger screens */
   padding: 20px;
   background-color: white;
+  color: black;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to give it a box effect */
   border-radius: 8px;  /* Optional: Rounded corners */
 }
@@ -31,7 +49,7 @@ body {
   position: absolute;
   top:30px;
   left: 30px;
-  color: white;
+  color: black;
   background-color: rgb(28, 100, 136);
   padding: 10px 15px;
   border-radius: 8px;
@@ -61,14 +79,17 @@ h2{
 
 /* About Section */
 #about {
-  background-color: #e9f7fd;
+  
   padding: 30px 20px;
   margin-bottom: 20px;
 }
 
-.bold-text {
+.bold-text,strong {
   font-weight: bold;
-}
+    font-weight: 700;
+    color: #2c3e50;
+  }
+
 
 /* Skills Section */
 #skills {

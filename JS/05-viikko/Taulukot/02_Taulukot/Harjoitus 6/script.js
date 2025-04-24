@@ -10,8 +10,3 @@ Odotettu tulos:
 // Kirjoita koodisi tähän
 
 let animalNames = ["Leijona", "Tiikeri", "Panda"];
-
-let letters= animalNames.split();
-if (let i=0; i>animalNames.length; i++){
-    console.log)
-}
