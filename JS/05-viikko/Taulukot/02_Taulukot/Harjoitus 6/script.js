@@ -10,3 +10,11 @@ Odotettu tulos:
 // Kirjoita koodisi tähän
 
 let animalNames = ["Leijona", "Tiikeri", "Panda"];
+for ( let i = 0; i < animalNames.length; i++ ) {
+    let nimi = animalNames[i];
+    let letters = nimi.split("");// ← split into characters
+    
+    
+    console.log(`Kirjaimet sanassa '${nimi}': ${letters}`);
+
+}
