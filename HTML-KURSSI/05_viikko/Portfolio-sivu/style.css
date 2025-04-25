@@ -3,27 +3,14 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   background-color: #f4f4f4;
-  display: flex;
+  display:cover;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;  /* Centers the content vertically */
+  min-height: 120vh;  /* Centers the content vertically */
   color: #333;
-  line-height: 1.6;
-  padding: 2rem
+ 
 }
-p {
-  max-width: 700px;
-  color:black;
-  margin: 1.5rem auto;
-  font-size: 1.1rem;
-  background-color: #fff;
-  padding: 1.2rem 1.5rem;
-  border-left: 4px solid rgb(28, 100, 136);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
-  
-}
 
 
 
@@ -37,7 +24,12 @@ p {
   border-radius: 8px;  /* Optional: Rounded corners */
 }
 
+
+
 #hero {
+  width: 100%;
+  max-width: 600px; /* Optional: adjust to your design */
+  margin-bottom: 2rem;
   background-image: url("/p.stuff/cv\ image.jpeg");
   background-size:center;
   background-repeat: no-repeat;   /* stops repeating/mirroring */
