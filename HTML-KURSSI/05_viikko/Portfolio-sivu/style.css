@@ -2,16 +2,14 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
+  padding: 0;
   background-color: #f4f4f4;
-  display:cover;
+  display:flex;
   justify-content: center;
   align-items: center;
-  min-height: 120vh;  /* Centers the content vertically */
   color: #333;
  
 }
-
-
 
 
 .container {
@@ -28,17 +26,15 @@ body {
 
 #hero {
   width: 100%;
-  max-width: 600px; /* Optional: adjust to your design */
-  margin-bottom: 2rem;
+  max-width: 300px; /* Optional: adjust to your design */
   background-image: url("/p.stuff/cv\ image.jpeg");
   background-size:center;
   background-repeat: no-repeat;   /* stops repeating/mirroring */
   background-position: center;
-  height:115vh;
-  position: relative;
+  
 }
 .hero-content {
-  position: absolute;
+  position:relative;
   top:30px;
   left: 30px;
   color: black;

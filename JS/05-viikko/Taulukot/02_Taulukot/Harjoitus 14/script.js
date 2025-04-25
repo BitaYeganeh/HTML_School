@@ -16,3 +16,14 @@ for (let i = 0; i < attendees.length; i++) {
 
 console.log(indeksi); // [0, 2, 4]
 
+
+//way 2:
+let jonnaIndexes= [];
+attendees.forEach((name, index)=> {
+  if (name == "Jonna"){
+    jonnaIndexes.push(index);
+    //console.log(index)
+  }
+});
+console.log(jonnaIndexes);
+

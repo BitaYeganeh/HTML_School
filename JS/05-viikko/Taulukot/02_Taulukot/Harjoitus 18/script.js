@@ -6,3 +6,6 @@ Käytä splice-metodia poistamaan "30" ja korvaamaan se arvoilla "25" ja "27".
 Odotettu tulos: [10, 20, 25, 27, 40, 50]
 */
 // Kirjoita koodisi tähän
+
+numbers.splice(2,1,25,27);
+console.log(numbers);

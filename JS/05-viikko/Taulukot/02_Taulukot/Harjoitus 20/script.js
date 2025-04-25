@@ -6,3 +6,6 @@ Luo uusi taulukko, joka sisältää vain sanat, joissa on yli 5 kirjainta words-
 Odotettu tulos: ['banaani', 'kirsikka', 'mansikka']
 */
 // Kirjoita funktiosi tähän
+
+let longWord = words.filter((word)=> word.length >5 );
+console.log(longWord);

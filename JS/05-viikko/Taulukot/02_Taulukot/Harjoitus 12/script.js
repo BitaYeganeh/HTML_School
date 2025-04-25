@@ -8,3 +8,10 @@ Odotettu tulos: ['Zeebra', 'Leopardi', 'Gazelli', 'Elefantti']
 let safariAnimals = ["Zeebra", "Leopardi", "Elefantti", "Gazelli"];
 safariAnimals.sort().reverse();
 console.log(safariAnimals);
+
+
+// way 2
+let sortedAnimals = [...safariAnimals].sort();
+
+let reversedAnimals = [...sortedAnimals].reverse();
+console.log(reversedAnimals);

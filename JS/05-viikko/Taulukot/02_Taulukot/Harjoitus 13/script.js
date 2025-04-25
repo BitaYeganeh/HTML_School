@@ -14,3 +14,7 @@ if(indeksi >= 0) {
 } else{
     console.log("false");
 }
+
+//way 2:
+let onTiikeri = zooAnimals.includes("Tiikeri");
+console.log(onTiikeri);
