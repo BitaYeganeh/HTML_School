@@ -23,3 +23,8 @@ function getPositiveTemperatures(lampötilä){
     return positiveTemp;
 }
  console.log(getPositiveTemperatures(temperatures));
+
+
+ //way 2:
+ let positiveTemps = [...temperatures].filter((temp)=> temp>0);
+ console.log(positiveTemps);
