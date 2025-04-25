@@ -4,6 +4,12 @@
 //1. Käy `teamMembers`-taulukko läpi ja tulosta jokainen nimi konsoliin.//
 
 let teamMembers = ['Joni', 'Emilia', 'Mikko', 'Sade'];
+teamMembers.forEach((name) => {
+    console.log(name);
+
+}); 
+//way ß2
+teamMembers = ['Joni', 'Emilia', 'Mikko', 'Sade'];
 console.log(teamMembers);
 
 //2. Poista taulukon ensimmäinen jäsen.  
@@ -19,9 +25,19 @@ console.log(teamMembers);
 teamMembers.splice(0,0,"Alex");
 console.log(teamMembers);
 
+//4. Lisää uusi jäsen "Alex" taulukon alkuun.  
+teamMembers.unshift("Alex");
+console.log(teamMembers);
+
 //5. Lisää uusi jäsen "Linda" taulukon loppuun.  
 teamMembers.splice(3,0,"Linda");
 console.log(teamMembers);
+
+//5. Lisää uusi jäsen "Linda" taulukon loppuun.  
+teamMembers.push("Linda");
+console.log(teamMembers);
+
+
 
 //6. Luo uusi taulukko, joka ei sisällä kahta ensimmäistä jäsentä ja jätä alkuperäinen muuttumattomaksi.  
 let Members = ['Joni', 'Emilia', 'Mikko', 'Sade'];
@@ -39,12 +55,19 @@ console.log(newTeam.indexOf("Jake"));
 //9. Korvaa "Mikko" kahdella uudella jäsenellä: "Maria" ja "Netta". 
 
 let Team= ['Joni', 'Emilia', 'Mikko', 'Sade'];
-Team.splice(2, 1, 'Maria', 'Netta');
+if(mikkoIndeksi !== -1){
+Team.splice(mikkoIndeksi, 1, 'Maria', 'Netta');
+}
 console.log(Team);
 
 //10. Liitä "Ahmad" taulukkoon ja tallenna tulos uuteen taulukkoon, alkuperäistä muuttamatta.  
 Team.splice(0,0,'Ahmad');
 console.log(Team);
+
+//10. Liitä "Ahmad" taulukkoon ja tallenna tulos uuteen taulukkoon, alkuperäistä muuttamatta.  
+let newlist =  [...Team, "Ahmad"];
+console.log(newlist);
+
 
 //11. Kopioi koko `teamMembers`-taulukko `slice`-metodilla ja tallenna se uuteen muuttujaan.  
 let Team2=[ 'Ahmad', 'Joni', 'Emilia', 'Maria', 'Netta', 'Sade' ];
@@ -62,7 +85,7 @@ console.log(combinedTeam);
 console.log(combinedTeam.indexOf("Joni"));
 
 //14. Muunna kaikki nimet taulukossa isoiksi kirjaimiksi, muuttamatta alkuperäistä taulukkoa.  
-let isoKirjaimiksi = combinedTeam.map(name => name.toLocaleUpperCase());
+let isoKirjaimiksi = combinedTeam.map(name => name.toUpperCase());
 console.log(isoKirjaimiksi);
 
 //15. Lajittele `teamMembers` aakkosjärjestykseen.  
@@ -77,4 +100,4 @@ console.log(checkName);
 
 //18. Tarkista, onko kaikilla nimillä yli kolme kirjainta.
 const kolmeKirjaintaNimia = combinedTeam.every(name =>name.length > 3);
-console.log(kolmeKirjaintaNimia);
+console.log("Kaikilla on yli 3 ", kolmeKirjaintaNimia);

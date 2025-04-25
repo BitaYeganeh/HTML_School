@@ -13,3 +13,4 @@ const planets = ["Merkurius", "Venus", "Maa", "Mars", "Jupiter"];
 for (let i =0; i< planets.length; i++) {
     console.log(`Planeetta: ${planets[i]}, indeksi: ${i}`);
 }
+

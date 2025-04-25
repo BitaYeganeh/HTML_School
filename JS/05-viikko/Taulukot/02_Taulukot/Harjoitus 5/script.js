@@ -20,6 +20,14 @@ let elainvarasto2 = ["Karhu", "Susi", "Kotka", "Kettu"];
     }
     
     }
+
+
+    //way 2:
+    elainvarasto1.forEach((elain)=> {
+        if (elainvarasto2.includes(elain){
+            console.log("Yhteinen laji" + elain);
+        }
+    })
         
     
 

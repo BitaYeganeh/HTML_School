@@ -18,6 +18,10 @@ function myAlphabetLength() {
 myAlphabetLength();
         
 
+//way 2:
+let ans = myAlphabet.length > 5 ? "Riittävä" : "Ei Riittävä";
+console.log("Tama on vastaus:", ans);
+
     
 
 
