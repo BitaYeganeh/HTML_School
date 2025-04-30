@@ -16,7 +16,6 @@
     
 
         //topping add :
-
         toppingChoosing.forEach(function (checkbox) {
             if (checkbox.checked) {
                 total += parseFloat(checkbox.getAttribute('data-price'));
@@ -24,8 +23,6 @@
         });
 
         // Extra adding:
-
-
         extraChoosing.forEach(function (checkbox) {
             if (checkbox.checked) {
                 total += parseFloat(checkbox.getAttribute('data-price'));
@@ -34,29 +31,30 @@
         
         //Delivery Fee Adding:
         const selectedDelivery = document.querySelector('input[name="delivery"]:checked');
-    if (selectedDelivery) {
+    
+        if (selectedDelivery) {
         total += parseFloat(selectedDelivery.getAttribute('data-price'));
-    }
+        }
         
         
         // Updating total price:
 
-        totalPriceDisplay.textContent = `${total}€`;
+    totalPriceDisplay.textContent = `${total}€`;
     totalPriceBanner.textContent = `${total}€`;
 
     totalPriceBanner.classList.add('animate-price');
 
     setTimeout(function () {
         totalPriceBanner.classList.remove('animate-price');
-    }, 300);
-}
+        }, 300);
+        }
         
-        //pancake form:
-        pancakeForm.addEventListener('change', function(event){
+    //pancake form:
+    pancakeForm.addEventListener('change', function(event){
             if (event.target.matches('select, input')) {
                 calculateTotal();
             }
-        });
+    });
 
 
     const seeOrderButton = document.getElementById('seeOrder');
@@ -64,8 +62,8 @@
 
     seeOrderButton.addEventListener('click', function(){
 
-        // customer name
-        const name = document.getElementById('customerName').value;
+    // taking the customer's name
+    const name = document.getElementById('customerName').value;
         
 
     // selected pancake
@@ -78,11 +76,10 @@
     toppingChoosing.forEach(function (checkbox){
         if (checkbox.checked){
             selectedToppings.push(checkbox.parentElement.textContent);
-        }
+            }
     });
 
     // selected extras
-
     const selectedExtras =[];
     extraChoosing.forEach(function (checkbox){
         if (checkbox.checked){
@@ -100,18 +97,19 @@
     const total = totalPriceDisplay.textContent;
 
 
-//summary
-const summary = [
-    "Nimi: " + name,
+    //summary
+    const summary = [
+    "Nimi: " + (name.length >0 ? name.join(', ') : "-"),
     "Tyyppi: " + selectedType,
     "Täytteet: " + (selectedToppings.length > 0 ? selectedToppings.join(', ') : "-"),
     "Lisukkeet: " + (selectedExtras.length > 0 ? selectedExtras.join(', ') : "-"),
     "Toimitus: " + selectedDelivery,
-    "Hinta: " + total
-];
+    "Hinta: " + total,
+    
+     ];
 
-alert(summary.join('\n'));
+     alert(summary.join('\n'));
 
 
-    });
+     });
     
