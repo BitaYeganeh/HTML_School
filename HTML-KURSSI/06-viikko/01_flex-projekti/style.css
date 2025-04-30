@@ -271,3 +271,11 @@
 .Gallery .container img:nth-child(6) {
   grid-area: 2 / 4 / 4 / 6;  /* row 2 to 4, col 4 to 6 */
 }
+
+.Gallery {
+  background-color: white; 
+  padding: 20px;            /* Creates spacing inside the frame */
+  margin: 2rem auto;        /* Space around the frame */
+  max-width: 1200px;        /* Optional: limits frame width */
+  border: 5px solid white;  /* White border - stands out on dark background */
+}
