@@ -59,12 +59,6 @@
         });
 
 
-
-    
-
-       
-
-        
     const seeOrderButton = document.getElementById('seeOrder');
     const summaryBox = document.getElementById('summaryText');
 
@@ -110,12 +104,14 @@
 const summary = [
     "Nimi: " + name,
     "Tyyppi: " + selectedType,
-    "Täytteet: " + selectedToppings.join(', '),  // Join toppings with commas if there are multiple
-    "Lisukkeet: " + selectedExtras.join(', '),   // Join extras with commas
+    "Täytteet: " + (selectedToppings.length > 0 ? selectedToppings.join(', ') : "-"),
+    "Lisukkeet: " + (selectedExtras.length > 0 ? selectedExtras.join(', ') : "-"),
     "Toimitus: " + selectedDelivery,
     "Hinta: " + total
 ];
 
-// Show the summary with each item on a new line in the alert box
 alert(summary.join('\n'));
+
+
     });
+    
