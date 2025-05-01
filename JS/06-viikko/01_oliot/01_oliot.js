@@ -56,10 +56,9 @@ function Book(title, author, yearPublished, genres){
     this.author =author;
     this.yearPublished=yearPublished;
     this.genres = genres;
-
 }
-const newBook = new Book("Why We Sleep", "Matthew Walker", 1992, ["Unihäiriöt"]);
-library.push(newBook);
+
+const library = new Book ("Why We Sleep", "Matthew Walker", 1992, ["Unihäiriöt"]);
 console.log(library);
 
 /* Tehtävä 5
@@ -67,19 +66,6 @@ Kirjoita funktio nimeltä `createBook`, joka ottaa parametreina `title`, `author
 Funktion tulee palauttaa uusi kirjaolio näillä ominaisuuksilla.
 Testaa `createBook`-funktiota luomalla uusi kirja käyttäjän antamilla arvoilla ja tulosta se konsoliin.
 */
-
-// Kirjoita koodisi tähän
-
-function createBook (title, author, yearPublished, genres){
-
-this.title=title;
-this.author=author;
-this.yearPublished=yearPublished;
-this.genres=genres;
-
-}
-
-
 
 
 
