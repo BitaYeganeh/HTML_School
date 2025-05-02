@@ -41,8 +41,7 @@ library[0].genres = ["Absurdi", "Tragikomiikka"];
 
 library[0]["isAvailable"] =true;
 
-console.log("onko kirja saatavilla?", library[0]["isAvailable"]);
-
+console.log("genret:", library[0]);
 
 /* Tehtävä 4
 Määrittele konstruktori-funktio nimeltä `Book`, joka luo uusia kirjoja, joilla on `title`, `author`, `yearPublished` ja `genres`.
@@ -51,15 +50,23 @@ Luo uusi kirjaolio `Book`-konstruktorilla ja lisää se `library`-kokoelmaan.
 
 // Kirjoita koodisi tähän
 
-function Book(title, author, yearPublished, genres){
+
+class Book {
+
+    constructor (title, author, yearPublished, genres){
     this.title = title;
     this.author =author;
     this.yearPublished=yearPublished;
     this.genres = genres;
 }
+}
 
-const library = new Book ("Why We Sleep", "Matthew Walker", 1992, ["Unihäiriöt"]);
+const kirja1 = new Book ("Why We Sleep", "Matthew Walker", 1992, ["Unihäiriöt"]);
+library.push(kirja1);
+
 console.log(library);
+
+
 
 /* Tehtävä 5
 Kirjoita funktio nimeltä `createBook`, joka ottaa parametreina `title`, `author`, `yearPublished` ja `genres` (taulukko).
@@ -68,21 +75,10 @@ Testaa `createBook`-funktiota luomalla uusi kirja käyttäjän antamilla arvoill
 */
 
 
-
-
-
 /* Tehtävä 6
 Muunna `library`-kokoelma JSON-merkkijonoksi ja tulosta se konsoliin.
 Jäsennä JSON-merkkijono takaisin JavaScript-olioksi ja tulosta ensimmäisen kirjan `title` konsoliin.
 */
-
-// Kirjoita koodisi tähän
-
-
-
-
-
-
 
 
 
@@ -92,14 +88,22 @@ Tulosta niiden oppilaiden nimet, joiden arvosana on yli 90.
 */
 
 // Kirjoita koodisi tähän
+const students = [
+    { name: "Sarah", age:22, grade: 100},
+    {name:"Ali", age:19, grade:73},
+    {name:"Liisa", age:28, grade:88},
+    {name:"Reza", age:19, grade:93},
+        
+];
 
+// suodatetaan hyvät opiskelijat:
+let goodGrades=students.filter(n => n.grade > 90)
 
+// tulostetaan hyvien opiskelijoiden pelkät nimet
+goodGrades.forEach(topStudent => {
 
-
-
-
-
-
+console.log(topStudent.name)
+})
 
 
 /* Tehtävä 8
@@ -107,14 +111,27 @@ Määrittele olio nimeltä `car`, jossa on ominaisuudet `brand`, `model`, `year`
 Käytä funktiota tarkistamaan onko auto sähköinen. Jos on, tulosta `"This car is eco-friendly!"`, muussa tapauksessa `"This car runs on fuel."`
 */
 
-// Kirjoita koodisi tähän
+const car = {
+    brand:"Audi",
+    model:"Q4",
+    year:2024,
+    isElectric: true,
+}
+if (car.isElectric){
+    console.log("This car is eco-friendly!")
+}
+else{
+    console.log("This car runs on fuel.")
+}
 
-
-
-
-
-
-
+if(car.year >= 2020){
+    console.log("Auto on uusi")
+}else{
+    console.log("Auto on vanha")
+}
+///
+car.isElectric ? console.log("This car is eco-friendly!") : console.log("This car runs on fuel.");
+console.log(car.isElectric ? "sähköauto" : "polttomoottoriauto")
 
 
 
@@ -124,15 +141,19 @@ Luo `movies`-taulukko, jossa jokainen elokuva on olio, jolla on ominaisuudet `ti
 Kirjoita silmukka, joka tulostaa kaikkien niiden elokuvien otsikot, joiden arvio on yli 8.
 */
 
-// Kirjoita koodisi tähän
 
+const movies = [
+    {title:"ooooohgjhj", director:"lllllllknk", rating:"7"},
+    {title:"mmmmmmmkjnkjnjh", director:"kkkkkjjhkguh", rating:"10"},
+    {title:"jjjjjjjkjhjhh", director:"hhhhhhkhhjhk", rating:"2"},
+    
+];
+for (let n of movies) {
 
-
-
-
-
-
-
+if (n.rating > 8) {
+    console.log(n.title);
+}
+}
 
 
 /* Tehtävä 10
@@ -141,12 +162,38 @@ Kirjoita funktio `findOldestCar`, joka ottaa vastaan taulukon auto-olioita ja pa
 
 // Kirjoita koodisi tähän
 
+const cars = [
+    {
+        brand:"Audi",
+        model:"Q4",
+        year:2024,
+    },
 
+    {
+        brand:"BMW",
+        model:"X6",
+        year:2014,
+    },
+    {
+        brand:"Toyota",
+        model:"Yaris",
+        year:2004,
+        },
+]
 
+function findOldestCar(cars){
+    let oldestCar = cars[0];
 
-
-
-
+    for (let n of cars){
+        if (n.year < oldestCar.year){
+            oldestCar= n;
+        }
+    }
+    
+    return oldestCar;
+}
+const oldestCar = findOldestCar(cars);
+console.log("Oldest car is:", oldestCar);
 
 
 
