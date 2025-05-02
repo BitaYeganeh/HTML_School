@@ -206,11 +206,33 @@ Kirjoita funktio, joka suodattaa ja palauttaa vain ne käyttäjät, jotka ovat y
 // Kirjoita koodisi tähän
 
 
+const userProfiles = [
+{
+    userName: "Bita_Yeganeh85",
+    email:"b.yeganeh85@gmail.com",
+    isAdmin:"true",
+},
 
+{
+    userName: "LauraJarvinen",
+    email:"break76@bc.com",
+    isAdmin:"true",
+},
 
+{
+    userName: "Sarah734",
+    email:"sarahgt@yahoo.com",
+    isAdmin:"false",
+},
 
+]
 
+function getAdmins(users) {
+    return users.filter(user => user.isAdmin === "true");
+  }
 
+const administrators = getAdmins(userProfiles);
+console.log(administrators);
 
 
 
