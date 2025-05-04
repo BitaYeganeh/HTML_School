@@ -279,13 +279,43 @@ Kirjoita funktio, joka tulostaa `"This phone supports 5G!"` jos `is5GEnabled` on
 
 // Kirjoita koodisi tähän
 
+const samrtphones = [
 
+{
+    brand: "Apple",
+    model: "16ProMax", 
+    batteryLife:"14685mAh",
+    is5GEnabled: true,
+},
 
+{
+    brand: "Samsung",
+    model: "S4", 
+    batteryLife:"3561mAh",
+    is5GEnabled: true,
+},
 
+{
+    brand: "Apple",
+    model: "iPhone 16", 
+    batteryLife:"3561mAh",
+    is5GEnabled: true,
+},
+{
+    brand: "Nokia",
+    model: "n12", 
+    batteryLife:"4623mAh",
+    is5GEnabled: false,
+},
+];
 
+samrtphones.forEach(phone => {
+    const message = phone.is5GEnabled
+    ? `${phone.brand} ${phone.model} : supports 5G`
+    : `${phone.brand} ${phone.model} : does not support 5G!`;
 
-
-
+    console.log(message);
+});
 
 
 
@@ -296,15 +326,20 @@ Kirjoita funktio, joka tulostaa `"This fox is young"` jos ikä on alle 3, ja `"T
 
 // Kirjoita koodisi tähän
 
+const fox =
+{
+    name:"Jimmi",
+    age:6,
+    habitat:"hvghg",
+}
 
-
-
-
-
-
-
-
-
+function checkAge(fox){
+if (fox.age < 3){
+console.log("This fox is young");}
+else{
+    console.log("This fox is an adult");
+}}
+checkAge(fox);
 
 
 /* Tehtävä 15
@@ -313,3 +348,37 @@ Kirjoita funktio, joka laskee kaikkien työntekijöiden yhteenlasketun palkan.
 */
 
 // Kirjoita koodisi tähän
+const employees = [
+    {
+        name:"Bita", 
+        position:"Senior Quality Control",
+        salary:3500,
+    
+    },
+    {
+        name:"Sarah", 
+        position:"Sales",
+        salary:2700,
+    
+    },
+    {
+        name:"Minna", 
+        position:"HR",
+        salary:2900,
+    
+    },
+
+]
+
+function totalSalary(employees){
+
+    let sum = 0;
+
+    employees.forEach(employee => {
+        sum += employee.salary;
+    
+});
+
+return sum;
+}
+console.log(`Total salary is: €${totalSalary(employees)}`);
