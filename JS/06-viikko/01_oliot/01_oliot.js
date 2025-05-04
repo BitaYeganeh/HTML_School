@@ -244,13 +244,32 @@ Kirjoita funktio, joka palauttaa vain valmiit tilaukset.
 
 // Kirjoita koodisi tähän
 
+const orders = [
+    {
+    orderId: 456321, customerName: "Bita", totalAmount: 43.56, status: "completed",
+    },
 
+    {
+    orderId: 456322, customerName: "Otso", totalAmount: 34.16, status: "pending",
+    },
 
+    {
+    orderId: 456323, customerName: "Leevi", totalAmount: 15.90, status: "completed",
+    },
 
+    {
+    orderId: 456324, customerName: "Anna", totalAmount: 5.60, status: "pending",
+    },
+];
 
+function valmisOrders(orders){
+    return orders.filter(order => order.status === "completed")
+}
 
+console.log(valmisOrders(orders));
 
-
+console.log(valmisOrders(orders)
+.map(order=>order.orderId));
 
 
 /* Tehtävä 13
