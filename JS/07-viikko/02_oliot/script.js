@@ -289,39 +289,199 @@ Jokaisella ketulla on `name`, `age` ja `furColor`.
 Kirjoita funktio, joka suodattaa ja palauttaa vain ne ketut, jotka ovat alle 2-vuotiaita.
 */
 
-// Kirjoita koodisi tähän
+const foxPack = [
+    {name:"vivi", age:1, furColor:"brown"},
+    {name:"xixi", age:1.5, furColor:"black"},
+    {name:"aaaa", age:4, furColor:"white"},
+    {name:"bbbb", age:2, furColor:"brown-black"},
+
+];
+
+function alleKaksiVuotias(foxPack){
+    // filter the ones who are under 2 years and firstly give them a name:
+    const puppies=foxPack.filter( fox => fox.age < 2);
+
+    puppies.forEach(fox => {
+        console.log(fox.name + ": Tama kettu on vauva");
+
+    });
+
+
+    // Palautetaan the filtered ones
+    return puppies;
+}
+
+alleKaksiVuotias(foxPack);
+
 
 /* Tehtävä 11
 Luo olio nimeltä `gameCharacter`, jolla on ominaisuudet `name`, `level`, `health` ja `inventory` (taulukko).
 Kirjoita funktio, joka tulostaa hahmon koko varustelistan.
 */
 
-// Kirjoita koodisi tähän
+const gameCharacter = {
+
+    name: "xxx", 
+    level: 2, 
+    health: "healthy",
+    inventory: ["sword", "map", "shield"]
+
+};
+ function varustelista (data){
+    console.log(data.name + "'s varustelista is:");
+
+    data.inventory.forEach(n =>{
+        console.log("- " + n);
+    });
+ }
+
+ varustelista(gameCharacter);
+
 
 /* Tehtävä 12
 Määrittele taulukko nimeltä `employees`, jossa jokaisella työntekijällä on `name`, `role` ja `workingHours`.
 Kirjoita funktio, joka etsii ja tulostaa ne työntekijät, jotka työskentelevät yli 40 tuntia viikossa.
 */
 
-// Kirjoita koodisi tähän
+const employee = [
+
+{name:"Bita", role:"QC", workingHours:38.25},
+{name:"Sarah", role:"HR", workingHours:42},
+{name:"Jonne", role:"Johtaja", workingHours:39},
+{name:"Anna", role:"sales", workingHours:56},
+
+];
+function yliTyötä (employees){
+    employees.forEach(employee => {
+
+    if(employee.workingHours > 40){
+        console.log(employee.name + ":is working more than 40 hours per week!");
+    }
+    else{
+        console.log(employee.name + ":is working normally");
+    }
+
+})};
+yliTyötä(employee);
+
 
 /* Tehtävä 13
 Luo taulukko `musicAlbums`, jossa jokaisella albumilla on `title`, `artist` ja `releaseYear`.
 Kirjoita funktio, joka tulostaa ne albumit, jotka on julkaistu vuoden 2000 jälkeen.
 */
 
-// Kirjoita koodisi tähän
+
+const musicAlbums = [
+    {
+        title:"vvv",
+        artist:"hhh",
+        releaseYear:2022,
+    },
+
+    {
+        title:"uuuu",
+        artist:"hhh",
+        releaseYear:2002,
+    },
+    {
+        title:"aaa",
+        artist:"hhh",
+        releaseYear:1988,
+    },
+        
+];
+function newAlbum(musicAlbums){
+    musicAlbums.forEach(album =>{
+        if(album.releaseYear >= 2000){
+            console.log(album.title + " :is new");
+
+        }
+    })
+};
+newAlbum(musicAlbums);
+
 
 /* Tehtävä 14
 Määrittele taulukko nimeltä `cars`, jossa jokaisella autolla on `brand`, `model` ja `horsepower`.
 Kirjoita funktio, joka etsii ja palauttaa auton, jolla on suurin hevosvoimamäärä.
 */
+const cars = [
+    {
+        brand:"BMW",
+        model: "x6",
+        horsepower: "335hp"
+    },
+    {
+        brand:"Audi",
+        model: "Q4",
+        horsepower: "282hp"
+    },
+    {
+        brand:"Tesla",
+        model: "S plaid",
+        horsepower: "1000hp"
+    },
+];
+function suurinHP (cars){
+    let strongestCar = cars[0];
+    let maxHP = parseInt(cars[0].horsepower);
 
-// Kirjoita koodisi tähän
+
+    for ( let i = 1 ; i < cars.length; i ++){
+        const currentHP =parseInt(cars[i].horsepower);
+        if(currentHP > maxHP){
+            maxHP = currentHP;
+            strongestCar = cars[i];
+        }
+    }
+    return strongestCar;
+
+
+}
+const fastest = suurinHP(cars);
+console.log(`${fastest.brand} ${fastest.model} has the most horsepower: ${fastest.horsepower}`);
+
+
 
 /* Tehtävä 15
 Luo taulukko `airports`, jossa jokaisella lentokentällä on `name`, `country` ja `flightsPerDay`.
 Kirjoita funktio, joka etsii lentokentän, jolla on eniten lentoja päivässä.
 */
+const airports = [
+    {
+        name:"Helsingin airport",
+        country:"Finland",
+        flightsPerDay:100,
+    },
+    {
+        name:"Istanbul airport",
+        country:"Turkey",
+        flightsPerDay:1500,
+    },
+    {
+        name:"London airport",
+        country:"UK",
+        flightsPerDay:700,
+    },
+];
+function enitenLentoja (airports) {
 
-// Kirjoita koodisi tähän
+    let maxAirport = airports[0];
+
+    for (let i = 1; i < airports.length; i ++) {
+
+        if (airports[i].flightsPerDay > maxAirport.flightsPerDay) {
+
+            maxAirport = airports[i];
+   
+}
+
+    }
+
+return maxAirport;
+}
+// call the function and display the result:
+
+const n = enitenLentoja(airports);
+
+console.log(`${n.name} at ${n.country} has the most flights per day with ${n.flightsPerDay} flights per day!`);
