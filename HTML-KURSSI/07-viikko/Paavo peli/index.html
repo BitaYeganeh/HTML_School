@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/HTML-KURSSI/07-viikko/Paavo peli/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Three claims, one lie!</h1>
+    
+    <form>
+        
+        <label for="Väite 1">Väite 1:</label><br>
+        <input type="text" id="fname1" name="fname1"><br>
+
+        <input type="checkbox" id="totuus1" name="t1" value="Bike">
+        <label for="t1"> Tämä on totta</label><br>
+        <br></br>
+
+
+        <label for="Väite 2">Väite 2:</label><br>
+        <input type="text" id="lname2" name="lname2"><br>
+        
+
+        <input type="checkbox" id="totuus2" name="t1" value="Bike">
+        <label for="t2"> Tämä on totta</label><br>
+        <br></br>
+
+
+        <label for="Väite 3">Väite 3:</label><br>
+        <input type="text" id="fname3" name="fname3"><br>
+
+        <input type="checkbox" id="totuus3" name="t3" value="Bike">
+        <label for="t3"> Tämä on totta</label><br>
+        <br></br>
+
+
+         <!-- <input type="button" value="Salaa totuustieto" onclick="document.getElementById('totuus1').hide();">-->
+        
+         <input type="button" value="Statement1 is FALSE">
+         <input type="button" value="Statement2 is FALSE">
+         <input type="button" value="Statement3 is FALSE">
+
+
+        <input type="button" value="salaa totuustieto" onclick="alert('salaan nyt')">
+      </form>
+    </div>
+      <br>
+      <button>Reveal the TRUTH!</button>
+
+      <!-- ALTERNATIVE WAY-->
+       <br></br>
+       <button onclick="alert('VAARIN!')">Minulla on 3 koiraa</button>
+
+       <script src="/HTML-KURSSI/07-viikko/Paavo peli/script.js"></script>
+
+  
+</body>
+</html>

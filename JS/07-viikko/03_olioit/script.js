@@ -1,59 +1,4 @@
-/* Tehtävä 1
-Luo konstruktori-funktio `User`, joka ottaa parametreina `username` ja `email`.
-Sen tulee luoda olio, jolla on nämä ominaisuudet sekä metodi `showInfo`, joka tulostaa käyttäjän tiedot.
-Luo uusi käyttäjä ja kutsu `showInfo()`.
-*/
 
-function User(username, email) {
-this.username = username;
-this.email = email;
-
-this.showInfo = function () {
-    console.log(`Username: ${this.username}, Email: ${this.email}`);
-};
-}
-const user1 = new User ("Bita", "bita.yeganeh@gmail.com");
-user1.showInfo();
-
-/* Tehtävä 2
-Muokkaa tehtävää 1: Käytä ES6 `class`-syntaksia `User`-luokan määrittelyyn.
-Lisää metodi `changeEmail(newEmail)`, joka päivittää käyttäjän sähköpostiosoitteen.
-*/
-
-class User1{
-    constructor(username, email) {
-        this.username = username;
-        this.email = email;
-    }
-    showInfo() {
-        console.log(`username: ${this.username}, Email: ${this.email}`);
-    }
-
-    changeEmail(newEmail){
-        this.email = newEmail;
-        console.log(`Email is updated to : ${this.email}`);
-    }
-}
-
-// add a new user to test it:
-const user3 = new User1("Bita", "b.yeganeh@gmail.com");
-user3.showInfo();
-// change email:
-user3.changeEmail("gh.yahoo.com");
-user3.showInfo();
-
-
-
-/* Tehtävä 3
-Luo olio `theme`, jolla on ominaisuudet `name` (light tai dark) ja `isActive`.
-Lisää HTML:ään painike. Kun sitä klikataan, vaihdetaan teema light ↔ dark ja päivitetään `isActive`-arvo.
-*/
-
-const theme = { 
-    name: "light",
-    isActive: true,
-
-},
 
 
 /* Tehtävä 4
@@ -62,7 +7,9 @@ Lisää HTML:ään kaksi painiketta: toinen kasvattaa `value`, toinen pienentä�
 Näytä `value` HTML-elementissä ja päivitä se reaaliaikaisesti painikkeiden avulla.
 */
 
-// Kirjoita koodisi tähän
+const counter= {
+    value:"",
+}
 
 /* Tehtävä 5
 Luo olio `product`, jolla on `name`, `price` ja `quantity`.
