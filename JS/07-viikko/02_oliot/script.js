@@ -4,22 +4,33 @@ Kirjoita funktio, joka tulostaa `"Ota sateenvarjo!"` jos sää on sateinen.
 */
 
 const weather = {
-    temperature:"12",
-    humidity:"23",
+    temperature:12,
+    humidity:65,
     condition:"sateinen",
 };
-function huomio(weather){
-    if (weather.condition === "sateinen") {
+
+const weather2 = {
+    temperature:12,
+    humidity:65,
+    condition:"Aurinkoinen",
+};
+function checkRain(weather){
+    if (weather.condition == "sateinen") {
         console.log("ota satenvarjo!");
-    } 
+    } else if(weather.condition=="Aurinkoinen"){
+        console.log("Käytä aurinkolasit");
+    }else{
+        console.log("pidä kivaa");
+    }
 }
 
 // call the function to test it:
-huomio(weather);
+checkRain(weather);
+checkRain(weather2);
 
 
 /* Tehtävä 2
-Määrittele olio nimeltä `shoppingCart`, joka sisältää taulukon tuotteista.
+Määrittele taulukko (Array) nimeltä `shoppingCart`, joka sisältää taulukon tuotteista.
 Jokaisella tuotteella on `name`, `price` ja `quantity`.
 Kirjoita funktio, joka laskee kaikkien ostoskorin tuotteiden kokonaishinnan.
 */
@@ -180,13 +191,13 @@ const courses = [
 ];
     function fullClass (data) {
         data.forEach(course => {
-            if (course.studentsEnrolled > 30) {
+            if (course.studentsEnrolled >= 30) {
                 console.log(course.courseName);
         }
 
     });
 
-    }
+    };
 fullClass(courses);
 
 
@@ -236,7 +247,7 @@ const city = [
 
 function size (data){
     data.forEach(city => {
-        if (city.population > 1000000){
+        if (city.population >= 1000000){
             console.log(city.name+ ": Tämä on suuri kaupunki!");
         }else{
             console.log(city.name+ ": Tämä on pieni kaupunki");
@@ -269,9 +280,9 @@ function totalBalance (data){
     
 
     data.forEach(tr => {
-        if (tr.type==="credit"){
+        if (tr.type=="credit"){
             balance += tr.amount;
-        } else if (tr.type === "debit"){
+        } else if (tr.type == "debit"){
             balance -= tr.amount;
         }
     });
@@ -323,19 +334,15 @@ const gameCharacter = {
 
     name: "xxx", 
     level: 2, 
-    health: "healthy",
+    health: 100,
     inventory: ["sword", "map", "shield"]
 
 };
- function varustelista (data){
-    console.log(data.name + "'s varustelista is:");
-
-    data.inventory.forEach(n =>{
-        console.log("- " + n);
-    });
- }
-
- varustelista(gameCharacter);
+ const printInventory = (data)=>{
+    console.log(data.inventory);
+    console.log(data.inventory.join(", "));
+ };
+ printInventory(gameCharacter);
 
 
 /* Tehtävä 12
@@ -440,6 +447,45 @@ function suurinHP (cars){
 }
 const fastest = suurinHP(cars);
 console.log(`${fastest.brand} ${fastest.model} has the most horsepower: ${fastest.horsepower}`);
+
+/* Tehtävä 14
+Määrittele taulukko nimeltä `cars`, jossa jokaisella autolla on `brand`, `model` ja `horsepower`.
+Kirjoita funktio, joka etsii ja palauttaa auton, jolla on suurin hevosvoimamäärä.
+*/
+
+let cars = [
+    {
+        brand:"BMW",
+        model: "x6",
+        horsepower: "335hp"
+    },
+    {
+        brand:"Audi",
+        model: "Q4",
+        horsepower: "282hp"
+    },
+    {
+        brand:"Tesla",
+        model: "S plaid",
+        horsepower: "1000hp"
+    },
+];
+const getMostPowerful = (cars)=> {
+
+    let largest;
+    let measurment =0;
+    cars.map((car)=>{
+        if (car.horsepower >measurment){
+            measurment = cars.horsepower;
+            largest = car;
+        }
+    });
+    return largest;
+    console.log(getMostPowerful(cars));
+}
+
+
+
 
 
 

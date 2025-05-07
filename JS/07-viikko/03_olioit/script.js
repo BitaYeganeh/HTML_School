@@ -1,4 +1,77 @@
+/* Tehtävä 1
+Luo konstruktori-funktio `User`, joka ottaa parametreina `username` ja `email`.
+Sen tulee luoda olio, jolla on nämä ominaisuudet sekä metodi `showInfo`, joka tulostaa käyttäjän tiedot.
+Luo uusi käyttäjä ja kutsu `showInfo()`.
+*/
 
+function User(username, email) {
+    this.username = username;
+    this.email = email;
+    
+    this.showInfo = function () {
+        console.log(`Username: ${this.username}, Email: ${this.email}`);
+    };
+    }
+    const user1 = new User ("Bita", "bita.yeganeh@gmail.com");
+    user1.showInfo();
+
+    /* Tehtävä 2
+Muokkaa tehtävää 1: Käytä ES6 `class`-syntaksia `User`-luokan määrittelyyn.
+Lisää metodi `changeEmail(newEmail)`, joka päivittää käyttäjän sähköpostiosoitteen.
+*/
+
+class User1{
+    constructor(username, email) {
+        this.username = username;
+        this.email = email;
+    }
+    showInfo() {
+        console.log(`username: ${this.username}, Email: ${this.email}`);
+    }
+
+    changeEmail(newEmail){
+        this.email = newEmail;
+        console.log(`Email is updated to : ${this.email}`);
+    }
+}
+
+// add a new user to test it:
+const user3 = new User1("Bita", "b.yeganeh@gmail.com");
+user3.showInfo();
+// change email:
+user3.changeEmail("gh.yahoo.com");
+user3.showInfo();
+
+
+
+/* Tehtävä 3
+Luo olio `theme`, jolla on ominaisuudet `name` (light tai dark) ja `isActive`.
+Lisää HTML:ään painike. Kun sitä klikataan, vaihdetaan teema light ↔ dark ja päivitetään `isActive`-arvo.
+*/
+
+// create theme obj.
+const theme = 
+    { name: "light", isActive: true};
+
+    // find the button from HTML:
+    const button = document.getElementById("themeButton");
+   
+// when click the button:
+button.addEventListener("click", () => {
+    if (theme.name === "light"){
+        theme.name = "dark";
+        theme.isActive= false;
+        document.body.className = "dark";
+        button.textContent = "Switch to Light Theme";
+    }else{
+        theme.name="light";
+        theme.isActive=true;
+        document.body.className = "light";
+        button.textContent = "Switch to Dark Theme";
+
+    }
+    console.log(theme);
+})
 
 
 /* Tehtävä 4
@@ -8,8 +81,28 @@ Näytä `value` HTML-elementissä ja päivitä se reaaliaikaisesti painikkeiden 
 */
 
 const counter= {
-    value:"",
+    value:0
+};
+
+ // find the button from HTML:
+const display = document.getElementById("valueDisplay");
+const increaseValue = document.getElementById("increaseValue");
+const decreaseValue = document.getElementById("decreaseValue");
+
+
+//when the button is clicked:
+function updateValue(){
+    display.textContent = counter.value;
 }
+increaseValue.addEventListener('click',()=>{
+    counter.value++;
+    updateValue();
+});
+
+decreaseValue.addEventListener('click', ()=>{
+    counter.value --;
+    updateValue();
+});
 
 /* Tehtävä 5
 Luo olio `product`, jolla on `name`, `price` ja `quantity`.
@@ -17,14 +110,87 @@ Lisää HTML:ään syöttökenttä, johon käyttäjä voi syöttää ostettavan 
 Päivitä `quantity` ja näytä kokonaishinta dynaamisesti.
 */
 
-// Kirjoita koodisi tähän
+const product = {
+    name: "maito",
+    price: 1.89,
+    quantity: 3,
+};
+// get the inputs and buttons from the HTML:
+
+const itemInput = document.getElementById("item");
+const quantityInput = document.getElementById("quantity");
+const submit = document.getElementById("submit");
+const totalOutput = document.getElementById("totalOutput");
+
+// function to calculate total price:
+
+function totalPrice () {
+   return (product.price * product.quantity).toFixed(2);
+    
+}
+
+//when button is clicked:
+submit.addEventListener('click',() => {
+
+    //get the name from input
+    product.name=itemInput.value;
+
+    // get quantity from the input
+    product.quantity=Number(quantityInput.value);
+   
+    // calculate total
+    const total = totalPrice();
+    
+
+   //show the result in console
+    console.log(`Product: ${product.name}`);
+    console.log(`Quantity: ${product.quantity}`);
+    console.log(`Total price: €${total}`);
+
+    totalOutput.textContent = `You ordered ${product.quantity} * ${product.name}. Total price: €${total}`;
+});
+
+
 
 /* Tehtävä 6
 Määrittele konstruktori `Task`, joka ottaa `title`, `description` ja `completed`.
 Lisää HTML:ään painike, jota painamalla lisätään uusi `Task`-olio `tasks`-taulukkoon ja näytetään se sivulla.
 */
 
-// Kirjoita koodisi tähän
+function Task (title, description, completed) {
+this.title = title;
+this.description = description;
+this.completed = completed;
+}
+
+// an array to store all tasks:
+const taskList = [];
+
+const titleInput = document.getElementById("title");
+const descriptionInput = document.getElementById("description");
+const completedInput = document.getElementById("completed");
+const addTaskButton = document.getElementById("uusi-task");
+
+
+
+
+addTaskButton.addEventListener('click', () => {
+    const task = new Task(
+        titleInput.value,
+        descriptionInput.value,
+        completedInput.checked
+    );
+    taskList.push(task);
+
+
+
+//show pop-up
+alert(`New task added: \nTitle: ${task.title}, \nDescription:${task.description}, \nCompleted: ${task.completed}`);
+
+
+});
+
+
 
 /* Tehtävä 7
 Luo olio `weatherApp`, jossa on metodi `fetchWeather(city)`.
@@ -32,7 +198,13 @@ Käytä `fetch`-funktiota hakeaksesi säätietoja API:sta ja näytä ne HTML-ele
 (API: OpenWeather tai jokin muu ilmainen sää-API)
 */
 
-// Kirjoita koodisi tähän
+const weatherApp = {
+    name:"WeatherChange",
+    fetchWeather(city) {
+
+    }
+
+}
 
 /* Tehtävä 8
 Luo konstruktori-funktio `Car`, joka ottaa `brand`, `model` ja `year`.
