@@ -9,7 +9,6 @@ const eläinlista = [
     { name: "Papukaija", type: "Lintu" },
     { name: "Kilpikonna", type: "Matelija" },
     { name: "Tursas", type: "Nilviäinen" },
-    { name: "Ampiainen", type: "Hyönteinen" },
     { name: "Pöllö", type: "Lintu" },
 ];
 // 2. Funktio listan näyttämiseen
