@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/HTML-KURSSI/07-viikko/Paavo peli/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Two Truths and a Lie</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"] {
+      width: 300px;
+      margin-bottom: 10px;
+    }
+    .true { color: green; }
+    .false { color: red; }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-    <h1>Three claims, one lie!</h1>
-    
-    <form>
-        
-        <label for="Väite 1">Väite 1:</label><br>
-        <input type="text" id="fname1" name="fname1"><br>
 
-        <input type="checkbox" id="totuus1" name="t1" value="Bike">
-        <label for="t1"> Tämä on totta</label><br>
-        <br></br>
+  <h1>Two Truths and a Lie Game</h1>
 
+  <h2>Player 1: Enter Claims & Select the Truths</h2>
+  <form id="player1Form">
+    <label>Claim 1: <input type="text" id="claim1" /></label>
+    <label><input type="radio" name="truth1" value="true" />True</label>
+    <label><input type="radio" name="truth1" value="false" />False</label><br><br>
 
-        <label for="Väite 2">Väite 2:</label><br>
-        <input type="text" id="lname2" name="lname2"><br>
-        
+    <label>Claim 2: <input type="text" id="claim2" /></label>
+    <label><input type="radio" name="truth2" value="true" />True</label>
+    <label><input type="radio" name="truth2" value="false" />False</label><br><br>
 
-        <input type="checkbox" id="totuus2" name="t1" value="Bike">
-        <label for="t2"> Tämä on totta</label><br>
-        <br></br>
+    <label>Claim 3: <input type="text" id="claim3" /></label>
+    <label><input type="radio" name="truth3" value="true" />True</label>
+    <label><input type="radio" name="truth3" value="false" />False</label><br><br>
 
-
-        <label for="Väite 3">Väite 3:</label><br>
-        <input type="text" id="fname3" name="fname3"><br>
-
-        <input type="checkbox" id="totuus3" name="t3" value="Bike">
-        <label for="t3"> Tämä on totta</label><br>
-        <br></br>
+    <button type="button" id="saveClaimsBtn">Save Claims</button>
+  </form>
 
 
-         <!-- <input type="button" value="Salaa totuustieto" onclick="document.getElementById('totuus1').hide();">-->
-        
-         <input type="button" value="Statement1 is FALSE">
-         <input type="button" value="Statement2 is FALSE">
-         <input type="button" value="Statement3 is FALSE">
+<!-- Player 2 Form (Initially Hidden) -->
 
 
-        <input type="button" value="salaa totuustieto" onclick="alert('salaan nyt')">
-      </form>
-    </div>
-      <br>
-      <button>Reveal the TRUTH!</button>
+  <h2>Player 2: Guess Which One Is the Lie</h2>
+  <form id="player2Form" class="hidden">
+    <div id="guessClaims"></div>
+    <button type="button" id="revealBtn">Reveal Result</button>
+  </form>
+  </form>
 
-      <!-- ALTERNATIVE WAY-->
-       <br></br>
-       <button onclick="alert('VAARIN!')">Minulla on 3 koiraa</button>
+  <div id="result"></div>
 
-       <script src="/HTML-KURSSI/07-viikko/Paavo peli/script.js"></script>
-
-  
+  <script src="script.js"></script>
 </body>
 </html>
