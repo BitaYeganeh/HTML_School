@@ -237,9 +237,9 @@ Lisää jokaisen postauksen viereen "Tykkää"-painike, joka kasvattaa `likes`-m
 */
 
 const posts = [
-    {title:"Aaaaa", content:"Bbbbbbb", likes: 0 },
-    {title:"Cccccccc", content:"Ddddddd", likes: 0 },
-    {title:"Eeeeeee", content:"Ffffffff", likes: 0 },
+    {title: "Aaaaa", content: "Bbbbbbb", likes: 0 },
+    {title: "Cccccccc", content: "Ddddddd", likes: 0 },
+    {title: "Eeeeeee", content: "Ffffffff", likes: 0 },
 ];
 const postElement = document.getElementById("posts");
 
@@ -268,21 +268,106 @@ Lisää metodi `increaseSalary(percent)`, joka kasvattaa palkkaa annetulla prose
 Luo työntekijä ja nosta hänen palkkaansa dynaamisesti.
 */
 
-// Kirjoita koodisi tähän
+function Employee(name, position, salary) {
+    this.name = name;
+    this.position = position;
+    this.salary= salary;
+
+
+
+this.increaseSalary = function (percent) {
+    this.salary += this.salary * (percent / 100);
+    console.log(`${this.name} 's new salary is: ${this.salary}`);
+};
+}
+
+const Employee1 = new Employee ("Bita", "QC", 3500);
+const Employee2 = new Employee ("Sarah", "HR", 3200);
+
+Employee1.increaseSalary(30);
+Employee2.increaseSalary(5);
+
+
+
 
 /* Tehtävä 12
 Luo olio `timer`, jolla on `seconds` ja metodi `start()`, joka laskee sekunteja ylöspäin.
 Näytä ajastin HTML-elementissä ja päivitä se sekunnin välein.
 */
 
-// Kirjoita koodisi tähän
+const timer = {
+    seconds: 0,
+    intervalId: null,
+    
+
+    start() {
+        if(this.intervalId !== null) return;
+
+        this.intervalId = setInterval(() => {
+
+        this.seconds++;
+        document.getElementById("timer").textContent = this.seconds;
+
+
+        }, 1000);
+        
+           },
+
+           stop(){
+            clearInterval(this.intervalId);
+            this.intervalId=null;
+           },
+
+    };
+    document.getElementById("start").addEventListener("click", () =>{
+        console.log("Start button clicked");
+        timer.start();
+    
+    });
+
+    document.getElementById("stop").addEventListener("click", () =>{
+        console.log("Stop button clicked");
+        timer.stop();
+    
+    });
+
+
 
 /* Tehtävä 13
 Luo konstruktori-funktio `Book`, joka ottaa parametreina `title`, `author` ja `pages`.
 Luo yksinkertainen kirjastosovellus, jonka avulla käyttäjät voivat lisätä kirjoja HTML-lomakkeen kautta ja näyttää ne dynaamisesti.
 */
+function Book(title, author, pages){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+}
 
-// Kirjoita koodisi tähän
+document.getElementById("bookForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents the default form submission behavior
+    // Further code will go here
+
+const title = document.getElementById("t").value;
+const author = document.getElementById("a").value;
+const pages = document.getElementById("p").value;
+
+
+const newBook = new Book (title, author, pages);
+
+//Create a New List Item (<li>) Element to display the book's information:
+const li = document.createElement("li");
+li.textContent =`${newBook.title} by ${newBook.author}- ${newBook.pages} pages`;
+
+//Append the New List Item to the Books List
+
+document.getElementById("books").appendChild(li);
+
+    // Clear the form inputs
+    document.getElementById("bookForm").reset();
+
+});
+
+
 
 /* Tehtävä 14
 Luo olio `foxTracker`, jolla on `foxes`-taulukko.
@@ -290,4 +375,26 @@ Lisää syöttökenttä ja painike, joiden avulla käyttäjät voivat lisätä u
 Näytä kettujen lista dynaamisesti HTML-elementissä.
 */
 
-// Kirjoita koodisi tähän
+const foxTracker = {
+    foxes: []
+  };
+
+document.getElementById("addFox").addEventListener("click", ()=>{
+    const name = document.getElementById("name").value;
+    const location = document.getElementById("loc").value;
+
+    if (name && location) {
+
+        foxTracker.foxes.push({ name, loc })
+
+        const li = document.createElement("li");
+        li.textContent = `${name} @ ${location}`;
+        document.getElementById("foxes").appendChild(li);
+
+
+        // nyt kenttä tyhjenee visuaalisesti
+        document.getElementById("name").value = "";
+        document.getElementById("loc").value = "";
+
+    }
+});
