@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pikku Eläintarha</title>
-    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="/JS/07-viikko/Eläintarha/favicon.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-    <script src="/JS/07-viikko/Eläintarha/script.js" defer></script>
+    
   </head>
   <body>
     <div class="container">
@@ -14,6 +14,7 @@
 
       <!-- Haku ja suodatus osio -->
       <div class="controls">
+        <div class="form-group">
         <input type="text" id="searchAnimal" placeholder="Etsi nimellä..." />
         <select id="filterType">
           <option value="Kaikki">Kaikki eläimet</option>
@@ -25,6 +26,7 @@
         </select>
         <button id="sortAnimals">Järjestä A-Ö</button>
       </div>
+    </div>
 
       <!-- Eläinten listanäkymä -->
       <ul id="animalList"></ul>
@@ -32,6 +34,7 @@
       <!-- Uuden eläimen lisääminen -->
       <div class="add-animal">
         <h2>Lisää uusi eläin</h2>
+        <div class="form-group">
         <input type="text" id="newAnimalName" placeholder="Eläimen nimi" />
         <select id="newAnimalType">
           <option value="Nisäkäs">Nisäkäs</option>
@@ -42,6 +45,7 @@
         </select>
         <button id="addAnimal">Lisää eläin</button>
       </div>
+    </div>
     </div>
     <script src="/JS/07-viikko/Eläintarha/script.js"></script>
   </body>

@@ -1,0 +1,131 @@
+/* Make the body take full height and center everything */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    background-color:rgba(234, 196, 196, 0.475); /* light page background */
+    font-family: sans-serif;
+    
+}
+.container{
+    width: 500px;                /* fixed width */
+    height: 650px;               /* fixed height */
+    background-color:rgb(205, 215, 195);
+    padding:10px;
+    max-height:700px;
+    background-image:url('/JS/07-viikko/Eläintarha/favicon.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    border-radius: 30px;
+    background-size: 550px ;
+    overflow: hidden;
+    background-blend-mode:lighten;
+    background-color: rgba(167, 174, 27, 0.233); /* Light overlay for readability */
+  }
+
+
+
+#animalList button {
+    min-width: 70px;        /* Make all buttons same width */
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-top: 1px;
+    padding: 2px 6px;
+    background-color:rgb(205, 215, 195);
+    color:blue;
+    border-color: blue;
+    border-radius: 4px;
+    cursor:grab;
+  }
+
+  #animalList li{
+    background-blend-mode: lighten;
+    margin:10px auto;
+    padding:10px;
+    width:280px;
+    height: 18px;
+    display:flex;
+    justify-content:space-between;
+    border-radius: 8px;
+    align-items: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px rgba(108, 8, 35, 0.1);
+
+    
+  }
+  #animalList {
+    max-height: 380px;      /* Control height */
+    overflow-y: auto;       /* Enable vertical scroll */
+    padding: 10px;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+ 
+  h1{
+    text-align: center;
+    font-size: 1.3rem; /* Optional: Makes it look more prominent */
+    margin-bottom: 10px;
+    margin-top: 2px;
+    color: rgb(18, 18, 107);
+  }
+  h2 {
+    text-align: center;
+    font-size: 1.3rem; /* Optional: Makes it look more prominent */
+    margin-bottom: 10px;
+    margin-top: 50px;
+    color: rgb(18, 18, 107);
+  }
+  .tarha_img {
+    display: block;
+    margin: 10px auto;
+    max-width: 200px;
+    
+  }
+  #addAnimal{
+   justify-items: center;
+  
+
+  }
+  .add-animal .form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10 px;              /* spacing between form items */
+    margin-top: 10px;
+    flex-wrap: wrap;        /* wrap items on small screens */
+  }
+  
+  .add-animal input,
+  .add-animal select,
+  .add-animal button {
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    min-width: 100px;
+  }
+  .controls .form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .controls input,
+  .controls select,
+  .controls button {
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    min-width: 100px;
+  }
+  
+  
+ 
+ 
