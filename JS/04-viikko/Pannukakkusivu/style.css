@@ -1,5 +1,5 @@
 body {
-    background-color:bisque;
+    background-color:white;
     color: #000000;
     display: flex;
     justify-content: center;
@@ -7,13 +7,29 @@ body {
     margin: 0;
     min-height: 100vh;
     overflow: hidden;
+    
   }
-  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/JS/04-viikko/Pannukakkusivu/pancake.jpeg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* Adjust fade level */
+    z-index: -1; /* Keep it behind all content */
+    background-position:bottom left;        /* Centered (default) */
+  }
   .container {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 100vw;
+    
+    
   }
   
   .image-container {
@@ -35,8 +51,10 @@ body {
     padding: 50px;
     min-height: 100vh;
     overflow-y: auto;
+   
   }
-  
+
+ 
   .price-banner {
     position: absolute;
     top: 20px;
@@ -66,7 +84,7 @@ body {
   }
   
   h3 {
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 14px;
     
   }
@@ -75,6 +93,14 @@ body {
     font-size: 20px;
     text-align: center;
     margin-top:50px;
+  }
+  h6 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: blueviolet;
+    text-align: center;
+    margin-bottom: 5px;
+    
   }
   
   input[type="checkbox"] {
@@ -94,6 +120,38 @@ body {
   .animate-price {
     animation: bounce 0.5s ease;
   }
+  /* Adjust the margin for the order summary */
 
 
-
+  .order-scroll-area {
+    max-height: 300px;      /* Adjust height to your layout */
+    overflow-y: auto;       /* Adds vertical scrollbar when needed */
+    border: 1px solid #ccc; /* Optional: visual boundary */
+    padding-right: 10px;    /* Avoid overlap with scrollbar */
+    margin-top: 20px;
+    
+  }
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .image-container,
+    .form-container {
+      width: 100%;
+      min-height: auto;
+    }
+  
+    .image-container img {
+      height: auto;
+    }
+  
+    .price-banner {
+      width: 80px;
+      height: 80px;
+      font-size: 20px;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  

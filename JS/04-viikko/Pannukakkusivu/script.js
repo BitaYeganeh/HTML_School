@@ -99,7 +99,7 @@
 
     //summary
     const summary = [
-    "Nimi: " + (name.length >0 ? name.join(', ') : "-"),
+    "Nimi: " + (name.length >0 ? name : "-"),
     "Tyyppi: " + selectedType,
     "Täytteet: " + (selectedToppings.length > 0 ? selectedToppings.join(', ') : "-"),
     "Lisukkeet: " + (selectedExtras.length > 0 ? selectedExtras.join(', ') : "-"),
@@ -107,9 +107,11 @@
     "Hinta: " + total,
     
      ];
+    // Update the page with the summary immediately
+    summaryBox.innerHTML = summary.join('<br>');
 
-     alert(summary.join('\n'));
-
-
-     });
-    
+     // Use setTimeout to ensure the alert and page update together
+     setTimeout(function() {
+        alert(summary.join('\n'));
+    }, 0); // This will execute immediately after the page update
+});
