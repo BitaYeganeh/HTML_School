@@ -118,3 +118,6 @@ document.getElementById("searchAnimal").addEventListener("input", () => {
 
    showAnimals(filtered);
 })
+
+
+ 
