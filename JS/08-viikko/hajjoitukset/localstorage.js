@@ -18,10 +18,19 @@ Hae se, pura JSON ja tulosta `theme`-ominaisuus.
 
 
 
-const userSettings = { theme:"dark",language:"English" };
-localStorage.get
+const userSettings = {
+    theme:"dark",
+    language:"English" 
+};
 
+// Tallenna localStorageen
+localStorage.setItem("userSettings", JSON.stringify(userSettings));
 
+// Hae ja pura JSON
+const data = JSON.parse(localStorage.getItem("userSettings"));
+
+// Tulosta theme
+console.log(data.theme);
 
 
 
@@ -30,8 +39,24 @@ Määrittele taulukko `favoriteBooks`, jossa on vähintään kolme kirjaoliota (
 Tallenna taulukko LocalStorageen.
 Hae ja pura se, sitten tulosta kaikkien kirjojen nimet.
 */
+const favoriteBooks = [
+    { title: "AAA", author:"aaa" },
+    { title: "BBB", author:"bbb" },
+    { title: "CCC", author:"ccc" },
+];
+// Tallenna localStorageen
+localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
 
-// Kirjoita koodi tähän
+// Hae ja pura JSON
+const data1 = JSON.parse(localStorage.getItem("favoriteBooks"));
+
+// tulosta kaikkien kirjojen nimet
+data1.forEach(book => {
+    console.log(book.title);
+});
+
+
+
 
 /* Tehtävä 4
 Kirjoita funktio `saveToLocalStorage(key, object)`, joka:
@@ -40,7 +65,9 @@ Kirjoita funktio `saveToLocalStorage(key, object)`, joka:
 Testaa tallentamalla olio ja hakemalla se.
 */
 
-// Kirjoita koodi tähän
+
+
+
 
 /* Tehtävä 5
 Kirjoita funktio `getFromLocalStorage(key)`, joka:

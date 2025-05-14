@@ -125,9 +125,8 @@ const movieJSON = JSON.stringify(film);
         const highRate = moviesArray.filter(data => data.rating > 8);
          // return the function
          return highRate;
- 
-
  }
+
 
 /* Tehtävä 8
 Määrittele olio nimeltä `shoppingCart`, jossa on:
@@ -142,7 +141,7 @@ const shoppingCart = {
         {name:"voita", price:3.10},
         {name:"Mehua", price:5.46},
 
-    ]
+    ],
 };
 const shoppingCartString = JSON.stringify(shoppingCart);
 console.log(shoppingCartString);
