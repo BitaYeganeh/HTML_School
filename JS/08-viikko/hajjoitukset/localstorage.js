@@ -69,6 +69,9 @@ Testaa tallentamalla olio ja hakemalla se.
 
 
 
+
+
+
 /* Tehtävä 5
 Kirjoita funktio `getFromLocalStorage(key)`, joka:
 - Hakee arvon LocalStoragesta.
