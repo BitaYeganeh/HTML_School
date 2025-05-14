@@ -3,7 +3,9 @@ Tallenna merkkijono `"Hello, LocalStorage!"` LocalStorageen avaimella `"message"
 Hae se ja tulosta konsoliin.
 */
 
-// Kirjoita koodi tähän
+localStorage.setItem("message",  "Hello, LocalStorage");
+const tervehdys = localStorage.getItem("message");
+console.log(tervehdys);
 
 /* Tehtävä 2
 Luo olio `userSettings`, jossa on:
@@ -14,7 +16,14 @@ Muunna se JSON-merkkijonoksi ja tallenna LocalStorageen.
 Hae se, pura JSON ja tulosta `theme`-ominaisuus.
 */
 
-// Kirjoita koodi tähän
+
+
+const userSettings = { theme:"dark",language:"English" };
+localStorage.get
+
+
+
+
 
 /* Tehtävä 3
 Määrittele taulukko `favoriteBooks`, jossa on vähintään kolme kirjaoliota (`title` ja `author`).
