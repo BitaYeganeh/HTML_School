@@ -5,9 +5,32 @@ Yritä käyttää muuttujaa ilman sen julistamista.
 Ota virhe kiinni ja loggaa: \"Strict mode -virhe: [virheilmoitus]\"
 */
 
+
+
+
+
+
 function task1() {
-  // Kirjoita koodi tähän
+  'use strict';
+  try {
+    x = 10; // Virhe: x ei ole määritelty
+  } catch (error) {
+    console.log('Strict mode -virhe: ' + error.message);
+  }
 }
+
+task1();
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tehtävä 2: Muuttujien oikea julistus
 
@@ -16,7 +39,25 @@ Yritä muuttaa vakion arvoa ja ota virhe kiinni.
 */
 
 function task2() {
-  // Kirjoita koodi tähän
+  
+ 
+    const MAX_USER = 100;
+    let currentUsers = 10;
+   try {
+    MAX_USER = 120;
+
+  } catch (error) {
+    console.log("there is an error" , error.message);
+
+  }
+  task2();
+  
+
+
+
+
+
+
 }
 
 /* Tehtävä 3: Luo objekti ja tulosta se
@@ -28,9 +69,21 @@ Luo objekti `userProfile`, jossa kentät:
 Tulosta objekti konsoliin.
 */
 
+
 function task3() {
-  // Kirjoita koodi tähän
-}
+ const userProfile = {
+  name:"Bita", email:"b.ye@bc.fi", isAdmin: false
+ }
+ console.log(userProfile);
+};
+
+task3();
+
+
+
+
+
+
 
 /* Tehtävä 4: Yksinkertainen funktio pinta-alan laskemiseen
 
@@ -38,8 +91,31 @@ Luo funktio `calculateArea(width, height)`, joka palauttaa suorakulmion pinta-al
 */
 
 function calculateArea(width, height) {
-  // Kirjoita koodi tähän
-}
+  
+  
+  try{
+   
+    const area = width * height;
+    
+
+    console.log("the area is:", area);
+
+  }catch(error){
+    console.log("Virhe pinta-alan laskennassa:", error.message);
+  }
+};
+calculateArea(10, 3);
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tehtävä 5: Vältä taikalukuja
 
