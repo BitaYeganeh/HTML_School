@@ -125,8 +125,19 @@ Luo funktio `applyDiscount(price)`, joka laskee hinnasta alennuksen.
 
 const DISCOUNT = 0.1;
 function applyDiscount(price) {
-  // Kirjoita koodi tähän
+  
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tehtävä 6: Kirjoita hyödyllisiä kommentteja
 
