@@ -123,10 +123,15 @@ Määritä vakio `DISCOUNT = 0.1`.
 Luo funktio `applyDiscount(price)`, joka laskee hinnasta alennuksen.
 */
 
-const DISCOUNT = 0.1;
+
 function applyDiscount(price) {
+  const DISCOUNT = 0.1;
+  const finalprice = price - (DISCOUNT * price);
+  console.log(finalprice);
   
 }
+
+applyDiscount(10);
 
 
 
@@ -146,8 +151,13 @@ Lisää funktioon kommentti, joka selittää sen tarkoituksen.
 */
 
 function greetUser(name) {
-  // Kirjoita koodi tähän
-}
+  return "Tervetuloa" + name;
+  console.log("Tervetuloa", name);
+  
+};
+
+
+
 
 /* Tehtävä 7: Refaktoroi epäselvä koodi selkeämmäksi
 
@@ -158,8 +168,18 @@ function f(n){return n<0 ? 'negative' : 'positive';}
 */
 
 function checkNumber(number) {
-  // Kirjoita koodi tähän
+  if(number<0){
+   console.log (number, "is negative");
+  }else{
+    console.log ( number, "is positive");
+  }
+  
 }
+checkNumber(3);
+checkNumber(-2);
+
+
+
 
 /* Tehtävä 8: Korjaa koodin muotoilu
 
@@ -168,7 +188,10 @@ Kirjoita koodi uudelleen käyttäen oikeaa muotoilua ja sisennystä.
 Ennen:
 let x=10; function example(){console.log(x);}
 */
-
+let x = 10;
 function example() {
-  // Kirjoita koodi tähän
+  
+  console.log(x);
+
 }
+example();
