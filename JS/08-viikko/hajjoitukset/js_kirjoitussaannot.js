@@ -72,7 +72,9 @@ Tulosta objekti konsoliin.
 
 function task3() {
  const userProfile = {
-  name:"Bita", email:"b.ye@bc.fi", isAdmin: false
+  name:"Bita",
+  email:"b.ye@bc.fi", 
+  isAdmin: false
  }
  console.log(userProfile);
 };
@@ -188,8 +190,9 @@ Kirjoita koodi uudelleen käyttäen oikeaa muotoilua ja sisennystä.
 Ennen:
 let x=10; function example(){console.log(x);}
 */
-let x = 10;
+
 function example() {
+  let x = 10;
   
   console.log(x);
 
