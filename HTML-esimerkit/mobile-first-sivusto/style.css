@@ -1,0 +1,47 @@
+/* Oletustyylit mobiilille */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+/* Mukautus suuremmille näytöille
+
+Käytä CSS-media queryja, jotta asettelu mukautuu kun näyttö on leveämpi.*/
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*
+Yleisiä näyttökokoja
+Laite	Näytön leve
+Puhelimet	0 - 767px
+Tabletit	768 - 1023px
+Tietokoneet	1024px+
+*/
+
+/*<picture>-elementti: Näytä oikea kuva
+
+Tällä menetelmällä voit ladata pienemmän kuvan mobiilille ja suuremman kuvan isoille näytöille.
+*/
+/*<picture>
+  <source srcset="image-small.jpg" media="(max-width: 767px)" />
+  <source srcset="image-medium.jpg" media="(max-width: 1023px)" />
+  <img src="image-large.jpg" alt="Kaunis maisema" />
+</picture>
+
+
+<img
+  src="image.jpg"
+  srcset="image-2x.jpg 2x, image-3x.jpg 3x"
+  alt="Kaunis maisema"
+/>
+
+/*2x ja 3x kertovat selaimelle, että se valitsee sopivan kuvan korkean resoluution näytöille.*/
