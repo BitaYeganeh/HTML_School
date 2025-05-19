@@ -7,15 +7,14 @@ Ota virhe kiinni ja loggaa: \"Strict mode -virhe: [virheilmoitus]\"
 
 
 
-
-
-
 function task1() {
   'use strict';
   try {
     x = 10; // Virhe: x ei ole määritelty
   } catch (error) {
     console.log('Strict mode -virhe: ' + error.message);
+  } finally{
+    console.log("funktio suoritettu");
   }
 }
 
@@ -40,7 +39,7 @@ Yritä muuttaa vakion arvoa ja ota virhe kiinni.
 
 function task2() {
   
- 
+
     const MAX_USER = 100;
     let currentUsers = 10;
    try {
@@ -50,15 +49,13 @@ function task2() {
     console.log("there is an error" , error.message);
 
   }
-  task2();
-  
-
-
-
-
+  console.log ("MAX-USER", MAX_USER);
+  console.log("currentUsers", currentUsers);
+ 
 
 
 }
+ task2();
 
 /* Tehtävä 3: Luo objekti ja tulosta se
 
