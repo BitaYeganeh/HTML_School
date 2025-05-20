@@ -224,6 +224,20 @@ Käytä **try/catch** virheenkäsittelyyn
 
 async function fetchProductDetails(hasError) {
   // Laita koodisi tähän
+  const wait = (ms) => new Promise ((resolve) =>
+     setTimeout(resolve, ms));
+  try{
+    await wait (3000);
+    if (hasError) {
+        throw new Error("Virhe tuotteen haussa");
+    }else{
+        return "Tuotetiedot haettu";
+    }
+  }catch ( error){
+    throw error;
+  }
+
+
 }
 
 // Testitapaukset
