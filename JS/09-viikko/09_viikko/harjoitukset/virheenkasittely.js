@@ -138,7 +138,8 @@ function getUser() {
   try{
     const json = localStorage.getItem("user");
     return JSON.parse(json);
-  }catch(error){
+    }catch(error){
+  
     console.error("Virhe haettaessa käyttäjää:", error.message);
     return null;
   }
@@ -149,21 +150,24 @@ document
   .getElementById("saveUser")
   .addEventListener("click", () => saveUser({ name: "Alice", age: 25 }));
 
-document.getElementById("noUser").addEventListener("click", () => {
+document
+.getElementById("noUser").addEventListener("click", () => {
   localStorage.setItem("user", "{ invalid JSON }");
   console.log("huonoa dataa");
 });
-document.getElementById("clearUser").addEventListener("click", () => {
+document
+.getElementById("clearUser").addEventListener("click", () => {
   localStorage.clear();
   console.log("localStorage tyhjennetty");
 });
 
-document.getElementById("getUserData").addEventListener("click", () => {
+document
+.getElementById("getUserData").addEventListener("click", () => {
   console.log("käyttäjän tiedot:", getUser());
 });
 
 Testitapaukset:
-saveUser({ name: "Alice", age: 25 }); 
+
 console.log(getUser()); 
 localStorage.setItem("user", "{ invalid JSON }"); 
 console.log(getUser()); 
@@ -183,8 +187,30 @@ checkProperty({ name: "Bob", age: 30 }, "name"); // Tulostaa arvon
 checkProperty({ name: "Bob", age: 30 }, "email"); // Tulostaa "Ominaisuutta ei löydy"
 */
 
-function checkProperty(obj, key) 
-  // Laita koodisi tähän
+function checkProperty(obj, key) {
+    // Laita koodisi tähän
+    if( obj.hasOwnProperty(key)){
+      console.log(obj[key]);
+
+    }else{
+      console.log("Ominaisuutta ei löydy!");
+    }
+
+
+}
+// testamaan nappien avulla:
+document
+.getElementById("goodData").addEventListener("click", () =>{
+  checkProperty({ name: "Bob", age: 30 }, "name");
+
+});
+
+document
+.getElementById("badData").addEventListener("click", () =>{
+  checkProperty({ name: "Bob", age: 30 }, "email");
+
+});
+
   
 
 /* Tehtävä 8: Fetch API -virheenkäsittely
@@ -198,6 +224,8 @@ fetchData("invalid-url"); // Tulostaa verkkovirheen
 
 async function fetchData(url) {
   // Laita koodisi tähän
+  fetch(url)
+  .then(!response)
 }
 
 /* Tehtävä 9: Korjaa URI-virhe
