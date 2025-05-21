@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  padding: 20px 0;
+  font-size: 2em;
+}
+
+.btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+
+
+.order {
+  text-align: center;
+}
+.status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  
+}
+.status.waiting {
+  color: orange;
+  font-weight: bold;
+}
+.mark-ready {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.mark-delivered {
+  background-color: green;
+  color: white;
+}

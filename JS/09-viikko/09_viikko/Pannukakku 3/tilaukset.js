@@ -7,7 +7,7 @@
     const totalPriceDisplay = document.getElementById('totalPriceDisplay');
     const totalPriceBanner = document.getElementById('totalPriceBanner');
     const pancakeForm = document.getElementById('pancakeForm');
-    
+   
     
 
 
@@ -99,10 +99,9 @@
 
 
 
-
     //summary
     const summary = [
-    "Nimi: " + (name.length >0 ? name : "-"),
+    "Nimi: " + (name.length > 0 ? name : "-"),
     "Tyyppi: " + selectedType,
     "Täytteet: " + (selectedToppings.length > 0 ? selectedToppings.join(', ') : "-"),
     "Lisukkeet: " + (selectedExtras.length > 0 ? selectedExtras.join(', ') : "-"),
@@ -117,5 +116,27 @@
      setTimeout(function() {
         alert(summary.join('\n'));
     }, 0); // This will execute immediately after the page update
+
 });
+//BUILD THE ORDER OBJECT
+    const order ={
+    id: created(),
+    customerName : name,
+    selectedPancake: selectedType,
+    toppings: selectedToppings,
+    extras: selectedExtras,
+    deliveryMethod: selectedDelivery,
+    totalPrice: total,
+    status: "waiting"
+
+    };
+    //SAVE TO LOCAL STORAGE:
+    let orders =JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(order);
+    localStorage.setItem("orders", JSON.stringify(orders));
+
+
+
+
+
 
