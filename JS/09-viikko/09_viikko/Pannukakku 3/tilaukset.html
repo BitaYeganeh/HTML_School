@@ -10,15 +10,26 @@
 <body>
     <h1>Kaikki tilaukset</h1>
     <a href="/JS/04-viikko/Pannukakkusivu/index.html" class="btn">Back to the order page</a>
- 
 
-    <div class="order">
-        <p>Status: <span class="status waiting">Waiting</span></p>
-        <button class="mark-ready">Ready</button>
-        <button class = "mark-delivered">Delivered</button>
+    <table id="ordersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <Th>Customer</Th>
+                <th>Pancake</th>
+                <th>Toppings</th>
+                <th>Extras</th>
+                <th>Delivery</th>
+                <th>Price</th>
+                <th>Status</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+                <!-- JS will insert order rows here -->
 
-    </div>
-
+        </tbody>
+    </table>
 
 
     <script src="tilaukset.js"></script>
